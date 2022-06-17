@@ -1,0 +1,14 @@
+{% extends "poll/base.html" %}
+{% block title %}Результат выполнения теста{% endblock %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{{ result.poll.title }}
+<hr>
+Результат: {{ result.points }} / {{ result.max_points }} <br>
+Процент правильных ответов : {{ percent }}%
+</body>
+{% endblock %}

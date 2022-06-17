@@ -1,0 +1,20 @@
+{% extends "poll/base.html" %}
+{% block title %}Главная страница{% endblock %}
+{% block content %}
+<div class="row">
+    {% for poll in polls %}
+    <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h4 class="card-title">
+                    <a href="#">{{ poll.title }}</a>
+                </h4>
+                <a href="{% url 'poll_detail' pk=poll.id %}">
+                    <button class="btn btn-dark">Пройти тест</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

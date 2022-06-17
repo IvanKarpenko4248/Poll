@@ -1,0 +1,18 @@
+{% extends "poll/base.html" %}
+{% block title %}{{Questions.question}}{% endblock %}
+{% block content %}
+<b>{{ question.question }}</b>
+<form method="post">
+    {% csrf_token %}
+    {% for answer in question.answers_set.all %}
+        <input type="checkbox" class="form-check-input" name="answer{{ question.number }}"  value="{{ answer.id }}"
+               id="answer{{ answer.id }}">
+        <label class="form-check-label" for="answer{{ answer.id }}">
+            {{answer.answer}}
+        </label>
+    {% endfor %}
+    <button type="submit" class="btn-submit">Oтветить</button>
+</form>
+{% endblock %}
+
+
