@@ -15,7 +15,7 @@
 
 2. Создать виртуальное окружение $ python -m venv venv (Windows)
 
-3. Активировать виртуальное окружение $ venv/bin/activate (Windows)
+3. Активировать виртуальное окружение $ venv/scripts/activate (Windows)
 
 4. Установить пакеты в виртуальное окружение $ pip install -r requirements.txt 
 
